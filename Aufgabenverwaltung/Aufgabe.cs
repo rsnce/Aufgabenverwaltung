@@ -14,9 +14,17 @@ namespace Aufgabenverwaltung
         public string Mitarbeiter { get; set; }
         public int Erledigungsgrad { get; set; }
 
-        public Aufgabe(int id, string bezeichnung, DateTime abgabedatum, string mitarbeiter, int erledigungsgrad)
+        public Aufgabe(int id, string bezeichnung, DateTime abgabedatum, string mitarbeiter, int erledigungsgrad) // für sql
         {
             Id = id;
+            Bezeichnung = bezeichnung;
+            Abgabedatum = abgabedatum;           
+            Mitarbeiter = mitarbeiter;
+            Erledigungsgrad = erledigungsgrad;
+            
+        }
+        public Aufgabe(string bezeichnung, DateTime abgabedatum, string mitarbeiter, int erledigungsgrad) // für .csv
+        {
             Bezeichnung = bezeichnung;
             Abgabedatum = abgabedatum;           
             Mitarbeiter = mitarbeiter;
